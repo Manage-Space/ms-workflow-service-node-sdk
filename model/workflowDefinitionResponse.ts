@@ -142,6 +142,7 @@ export namespace WorkflowDefinitionResponse {
         ReservationExpired = <any> 'ReservationExpired',
         SpaceReservationCreated = <any> 'SpaceReservationCreated',
         LeaseCreated = <any> 'LeaseCreated',
+        RentalCreated = <any> 'RentalCreated',
         DiaryEntryRequired = <any> 'DiaryEntryRequired',
         DiaryEntryActioned = <any> 'DiaryEntryActioned',
         DocumentReady = <any> 'DocumentReady',
