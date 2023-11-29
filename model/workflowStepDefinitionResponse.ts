@@ -73,6 +73,10 @@ export class WorkflowStepDefinitionResponse {
     * Templates
     */
     'templates': object;
+    /**
+    * Ports
+    */
+    'ports'?: object;
 
     static discriminator: string | undefined = undefined;
 
@@ -150,6 +154,11 @@ export class WorkflowStepDefinitionResponse {
         {
             "name": "templates",
             "baseName": "templates",
+            "type": "object"
+        },
+        {
+            "name": "ports",
+            "baseName": "ports",
             "type": "object"
         }    ];
 

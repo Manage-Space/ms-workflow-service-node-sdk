@@ -54,6 +54,10 @@ export class WorkflowStepInstanceResponse {
     */
     'externalStepName'?: string;
     /**
+    * Ports
+    */
+    'ports'?: object;
+    /**
     * The event that will trigger this step.
     */
     'executionTriggerValue'?: string;
@@ -150,6 +154,11 @@ export class WorkflowStepInstanceResponse {
             "name": "externalStepName",
             "baseName": "externalStepName",
             "type": "string"
+        },
+        {
+            "name": "ports",
+            "baseName": "ports",
+            "type": "object"
         },
         {
             "name": "executionTriggerValue",

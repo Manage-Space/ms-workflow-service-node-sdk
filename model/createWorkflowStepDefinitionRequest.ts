@@ -46,6 +46,10 @@ export class CreateWorkflowStepDefinitionRequest {
     */
     'maxRunCount'?: number;
     /**
+    * Ports
+    */
+    'ports'?: object;
+    /**
     * Mappings
     */
     'mappings': object;
@@ -108,6 +112,11 @@ export class CreateWorkflowStepDefinitionRequest {
             "name": "maxRunCount",
             "baseName": "maxRunCount",
             "type": "number"
+        },
+        {
+            "name": "ports",
+            "baseName": "ports",
+            "type": "object"
         },
         {
             "name": "mappings",
