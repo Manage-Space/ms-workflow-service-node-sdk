@@ -58,6 +58,10 @@ export class WorkflowStepInstanceResponse {
     */
     'ports'?: object;
     /**
+    * The port that starts this step.
+    */
+    'triggerPort'?: string;
+    /**
     * The event that will trigger this step.
     */
     'executionTriggerValue'?: string;
@@ -159,6 +163,11 @@ export class WorkflowStepInstanceResponse {
             "name": "ports",
             "baseName": "ports",
             "type": "object"
+        },
+        {
+            "name": "triggerPort",
+            "baseName": "triggerPort",
+            "type": "string"
         },
         {
             "name": "executionTriggerValue",

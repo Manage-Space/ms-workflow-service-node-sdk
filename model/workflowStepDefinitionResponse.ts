@@ -77,6 +77,10 @@ export class WorkflowStepDefinitionResponse {
     * Ports
     */
     'ports'?: object;
+    /**
+    * The port that starts this step.
+    */
+    'triggerPort'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -160,6 +164,11 @@ export class WorkflowStepDefinitionResponse {
             "name": "ports",
             "baseName": "ports",
             "type": "object"
+        },
+        {
+            "name": "triggerPort",
+            "baseName": "triggerPort",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

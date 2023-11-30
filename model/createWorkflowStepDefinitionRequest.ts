@@ -50,6 +50,10 @@ export class CreateWorkflowStepDefinitionRequest {
     */
     'ports'?: object | null;
     /**
+    * The port that starts this step.
+    */
+    'triggerPort'?: string;
+    /**
     * Mappings
     */
     'mappings': object;
@@ -117,6 +121,11 @@ export class CreateWorkflowStepDefinitionRequest {
             "name": "ports",
             "baseName": "ports",
             "type": "object"
+        },
+        {
+            "name": "triggerPort",
+            "baseName": "triggerPort",
+            "type": "string"
         },
         {
             "name": "mappings",
