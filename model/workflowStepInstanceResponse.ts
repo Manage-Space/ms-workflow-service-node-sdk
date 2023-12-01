@@ -30,10 +30,6 @@ export class WorkflowStepInstanceResponse {
     */
     'workflowStepDefinitionId': string;
     /**
-    * The type of this step
-    */
-    'stepTypeId': number;
-    /**
     * The start time of this workflow step
     */
     'startedAt'?: Date;
@@ -46,10 +42,6 @@ export class WorkflowStepInstanceResponse {
     */
     'stepStatusId': number;
     /**
-    * The event the step will raise.
-    */
-    'raiseEventSchemaCodeName'?: string;
-    /**
     * The name of a custom function.
     */
     'externalStepName'?: string;
@@ -61,10 +53,6 @@ export class WorkflowStepInstanceResponse {
     * The port that starts this step.
     */
     'triggerPort'?: string;
-    /**
-    * The event that will trigger this step.
-    */
-    'executionTriggerValue'?: string;
     /**
     * The number of minutes after finishing the previous step that this step should execute by.
     */
@@ -93,18 +81,6 @@ export class WorkflowStepInstanceResponse {
     * The number of times this step can run.
     */
     'maxRunCount': number;
-    /**
-    * Mappings
-    */
-    'mappings': object;
-    /**
-    * Literals
-    */
-    'literals': object;
-    /**
-    * Templates
-    */
-    'templates': object;
 
     static discriminator: string | undefined = undefined;
 
@@ -130,11 +106,6 @@ export class WorkflowStepInstanceResponse {
             "type": "string"
         },
         {
-            "name": "stepTypeId",
-            "baseName": "stepTypeId",
-            "type": "number"
-        },
-        {
             "name": "startedAt",
             "baseName": "startedAt",
             "type": "Date"
@@ -150,11 +121,6 @@ export class WorkflowStepInstanceResponse {
             "type": "number"
         },
         {
-            "name": "raiseEventSchemaCodeName",
-            "baseName": "raiseEventSchemaCodeName",
-            "type": "string"
-        },
-        {
             "name": "externalStepName",
             "baseName": "externalStepName",
             "type": "string"
@@ -167,11 +133,6 @@ export class WorkflowStepInstanceResponse {
         {
             "name": "triggerPort",
             "baseName": "triggerPort",
-            "type": "string"
-        },
-        {
-            "name": "executionTriggerValue",
-            "baseName": "executionTriggerValue",
             "type": "string"
         },
         {
@@ -208,21 +169,6 @@ export class WorkflowStepInstanceResponse {
             "name": "maxRunCount",
             "baseName": "maxRunCount",
             "type": "number"
-        },
-        {
-            "name": "mappings",
-            "baseName": "mappings",
-            "type": "object"
-        },
-        {
-            "name": "literals",
-            "baseName": "literals",
-            "type": "object"
-        },
-        {
-            "name": "templates",
-            "baseName": "templates",
-            "type": "object"
         }    ];
 
     static getAttributeTypeMap() {

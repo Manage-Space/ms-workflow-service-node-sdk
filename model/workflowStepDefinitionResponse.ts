@@ -22,25 +22,13 @@ export class WorkflowStepDefinitionResponse {
     */
     'workflowDefinitionId': string;
     /**
-    * The type of this step
-    */
-    'stepTypeId': WorkflowStepDefinitionResponse.StepTypeIdEnum;
-    /**
     * A description of what the step does.
     */
     'description': string;
     /**
-    * The event that will trigger this step.
-    */
-    'executionTriggerValue'?: string;
-    /**
     * The number of minutes after finishing the previous step that this step should execute by.
     */
     'delay'?: number;
-    /**
-    * The event the step will raise.
-    */
-    'raiseEventSchemaCodeName'?: string;
     /**
     * The name of a custom function.
     */
@@ -61,18 +49,6 @@ export class WorkflowStepDefinitionResponse {
     * The number of times this step can run.
     */
     'maxCount': number;
-    /**
-    * Mappings
-    */
-    'mappings': object;
-    /**
-    * Literals
-    */
-    'literals': object;
-    /**
-    * Templates
-    */
-    'templates': object;
     /**
     * Ports
     */
@@ -96,29 +72,14 @@ export class WorkflowStepDefinitionResponse {
             "type": "string"
         },
         {
-            "name": "stepTypeId",
-            "baseName": "stepTypeId",
-            "type": "WorkflowStepDefinitionResponse.StepTypeIdEnum"
-        },
-        {
             "name": "description",
             "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "executionTriggerValue",
-            "baseName": "executionTriggerValue",
             "type": "string"
         },
         {
             "name": "delay",
             "baseName": "delay",
             "type": "number"
-        },
-        {
-            "name": "raiseEventSchemaCodeName",
-            "baseName": "raiseEventSchemaCodeName",
-            "type": "string"
         },
         {
             "name": "externalStepName",
@@ -146,21 +107,6 @@ export class WorkflowStepDefinitionResponse {
             "type": "number"
         },
         {
-            "name": "mappings",
-            "baseName": "mappings",
-            "type": "object"
-        },
-        {
-            "name": "literals",
-            "baseName": "literals",
-            "type": "object"
-        },
-        {
-            "name": "templates",
-            "baseName": "templates",
-            "type": "object"
-        },
-        {
             "name": "ports",
             "baseName": "ports",
             "type": "object"
@@ -176,11 +122,3 @@ export class WorkflowStepDefinitionResponse {
     }
 }
 
-export namespace WorkflowStepDefinitionResponse {
-    export enum StepTypeIdEnum {
-        NUMBER_1 = <any> 1,
-        NUMBER_2 = <any> 2,
-        NUMBER_3 = <any> 3,
-        NUMBER_4 = <any> 4
-    }
-}

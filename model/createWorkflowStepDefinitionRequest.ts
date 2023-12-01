@@ -18,14 +18,6 @@ export class CreateWorkflowStepDefinitionRequest {
     */
     'description': string;
     /**
-    * The event the step will raise.
-    */
-    'raiseEventSchemaCodeName'?: string;
-    /**
-    * The event the step will raise.
-    */
-    'executionTriggerValue'?: string;
-    /**
     * The number of minutes after finishing the previous step that this step should execute by.
     */
     'delay'?: number;
@@ -54,22 +46,6 @@ export class CreateWorkflowStepDefinitionRequest {
     */
     'triggerPort'?: string;
     /**
-    * Mappings
-    */
-    'mappings': object;
-    /**
-    * Literals
-    */
-    'literals': object;
-    /**
-    * Templates
-    */
-    'templates': object;
-    /**
-    * Step type id
-    */
-    'stepTypeId': number;
-    /**
     * The name of a custom function.
     */
     'externalStepName'?: string;
@@ -80,16 +56,6 @@ export class CreateWorkflowStepDefinitionRequest {
         {
             "name": "description",
             "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "raiseEventSchemaCodeName",
-            "baseName": "raiseEventSchemaCodeName",
-            "type": "string"
-        },
-        {
-            "name": "executionTriggerValue",
-            "baseName": "executionTriggerValue",
             "type": "string"
         },
         {
@@ -126,26 +92,6 @@ export class CreateWorkflowStepDefinitionRequest {
             "name": "triggerPort",
             "baseName": "triggerPort",
             "type": "string"
-        },
-        {
-            "name": "mappings",
-            "baseName": "mappings",
-            "type": "object"
-        },
-        {
-            "name": "literals",
-            "baseName": "literals",
-            "type": "object"
-        },
-        {
-            "name": "templates",
-            "baseName": "templates",
-            "type": "object"
-        },
-        {
-            "name": "stepTypeId",
-            "baseName": "stepTypeId",
-            "type": "number"
         },
         {
             "name": "externalStepName",

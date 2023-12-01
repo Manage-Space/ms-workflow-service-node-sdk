@@ -80,7 +80,6 @@ let primitives = [
 let enumsMap: {[index: string]: any} = {
         "CreateWorkflowDefinitionRequest.TriggerEventSchemaCodeNameEnum": CreateWorkflowDefinitionRequest.TriggerEventSchemaCodeNameEnum,
         "WorkflowDefinitionResponse.TriggerEventSchemaCodeNameEnum": WorkflowDefinitionResponse.TriggerEventSchemaCodeNameEnum,
-        "WorkflowStepDefinitionResponse.StepTypeIdEnum": WorkflowStepDefinitionResponse.StepTypeIdEnum,
 }
 
 let typeMap: {[index: string]: any} = {
