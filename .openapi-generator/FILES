@@ -25,6 +25,7 @@ model/metaDataNameResponse.ts
 model/models.ts
 model/unauthorizedError401Response.ts
 model/unauthorizedError401ResponseError.ts
+model/updateStepInstanceRequestDto.ts
 model/workflowDefinitionResponse.ts
 model/workflowInstanceResponse.ts
 model/workflowStepDefinitionResponse.ts

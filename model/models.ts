@@ -21,6 +21,7 @@ export * from './metaDataCodeResponse';
 export * from './metaDataNameResponse';
 export * from './unauthorizedError401Response';
 export * from './unauthorizedError401ResponseError';
+export * from './updateStepInstanceRequestDto';
 export * from './workflowDefinitionResponse';
 export * from './workflowInstanceResponse';
 export * from './workflowStepDefinitionResponse';
@@ -60,6 +61,7 @@ import { MetaDataCodeResponse } from './metaDataCodeResponse';
 import { MetaDataNameResponse } from './metaDataNameResponse';
 import { UnauthorizedError401Response } from './unauthorizedError401Response';
 import { UnauthorizedError401ResponseError } from './unauthorizedError401ResponseError';
+import { UpdateStepInstanceRequestDto } from './updateStepInstanceRequestDto';
 import { WorkflowDefinitionResponse } from './workflowDefinitionResponse';
 import { WorkflowInstanceResponse } from './workflowInstanceResponse';
 import { WorkflowStepDefinitionResponse } from './workflowStepDefinitionResponse';
@@ -104,6 +106,7 @@ let typeMap: {[index: string]: any} = {
     "MetaDataNameResponse": MetaDataNameResponse,
     "UnauthorizedError401Response": UnauthorizedError401Response,
     "UnauthorizedError401ResponseError": UnauthorizedError401ResponseError,
+    "UpdateStepInstanceRequestDto": UpdateStepInstanceRequestDto,
     "WorkflowDefinitionResponse": WorkflowDefinitionResponse,
     "WorkflowInstanceResponse": WorkflowInstanceResponse,
     "WorkflowStepDefinitionResponse": WorkflowStepDefinitionResponse,
