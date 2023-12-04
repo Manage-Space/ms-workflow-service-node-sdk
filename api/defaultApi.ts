@@ -108,10 +108,12 @@ export class DefaultApi {
     /**
      * Create meta data for your organization workflows.
      * @summary Create meta data for your organization workflows.
+     * @param orgId The Organization ID
      * @param createMetaDataRequest 
      */
-    public async createMetaData (createMetaDataRequest: CreateMetaDataRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetStepCode200Response;  }> {
-        const localVarPath = this.basePath + '/workflow/meta-data';
+    public async createMetaData (orgId: string, createMetaDataRequest: CreateMetaDataRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetStepCode200Response;  }> {
+        const localVarPath = this.basePath + '/workflow/orgs/{orgId}/meta-data'
+            .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json;v=1', 'application/json'];
@@ -122,6 +124,11 @@ export class DefaultApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
+
+        // verify required parameter 'orgId' is not null or undefined
+        if (orgId === null || orgId === undefined) {
+            throw new Error('Required parameter orgId was null or undefined when calling createMetaData.');
+        }
 
         // verify required parameter 'createMetaDataRequest' is not null or undefined
         if (createMetaDataRequest === null || createMetaDataRequest === undefined) {
@@ -603,9 +610,11 @@ export class DefaultApi {
     /**
      * Get the meta data step names for all steps in your organization.
      * @summary Get the meta data step names for all steps in your organization.
+     * @param orgId The Organization ID
      */
-    public async getStepNames (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetStepNames200Response;  }> {
-        const localVarPath = this.basePath + '/workflow/meta-data';
+    public async getStepNames (orgId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetStepNames200Response;  }> {
+        const localVarPath = this.basePath + '/workflow/orgs/{orgId}/meta-data'
+            .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json;v=1', 'application/json'];
@@ -616,6 +625,11 @@ export class DefaultApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
+
+        // verify required parameter 'orgId' is not null or undefined
+        if (orgId === null || orgId === undefined) {
+            throw new Error('Required parameter orgId was null or undefined when calling getStepNames.');
+        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 

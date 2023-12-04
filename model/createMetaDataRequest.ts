@@ -21,6 +21,10 @@ export class CreateMetaDataRequest {
     * The code that will run for steps with this external name.
     */
     'code': string;
+    /**
+    * Object version
+    */
+    'versionId'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,6 +37,11 @@ export class CreateMetaDataRequest {
         {
             "name": "code",
             "baseName": "code",
+            "type": "string"
+        },
+        {
+            "name": "versionId",
+            "baseName": "versionId",
             "type": "string"
         }    ];
 
