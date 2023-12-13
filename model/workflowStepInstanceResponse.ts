@@ -11,16 +11,13 @@
  */
 
 import { RequestFile } from './models';
+import { ExcludeCodeMetaData } from './excludeCodeMetaData';
 
 export class WorkflowStepInstanceResponse {
     /**
     * Workflow Step Instance ID
     */
     'id': string;
-    /**
-    * Workflow Step Instance Description
-    */
-    'description': string;
     /**
     * Workflow Instance ID of this step
     */
@@ -41,10 +38,6 @@ export class WorkflowStepInstanceResponse {
     * The status of this workflow
     */
     'stepStatusId': number;
-    /**
-    * The name of a custom function.
-    */
-    'externalStepName'?: string;
     /**
     * Ports
     */
@@ -81,6 +74,7 @@ export class WorkflowStepInstanceResponse {
     * The number of times this step can run.
     */
     'maxRunCount': number;
+    'metaData': ExcludeCodeMetaData;
 
     static discriminator: string | undefined = undefined;
 
@@ -88,11 +82,6 @@ export class WorkflowStepInstanceResponse {
         {
             "name": "id",
             "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
             "type": "string"
         },
         {
@@ -119,11 +108,6 @@ export class WorkflowStepInstanceResponse {
             "name": "stepStatusId",
             "baseName": "stepStatusId",
             "type": "number"
-        },
-        {
-            "name": "externalStepName",
-            "baseName": "externalStepName",
-            "type": "string"
         },
         {
             "name": "ports",
@@ -169,6 +153,11 @@ export class WorkflowStepInstanceResponse {
             "name": "maxRunCount",
             "baseName": "maxRunCount",
             "type": "number"
+        },
+        {
+            "name": "metaData",
+            "baseName": "metaData",
+            "type": "ExcludeCodeMetaData"
         }    ];
 
     static getAttributeTypeMap() {

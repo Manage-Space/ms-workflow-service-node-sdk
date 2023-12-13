@@ -11,12 +11,9 @@
  */
 
 import { RequestFile } from './models';
+import { NameOnlyMetaDataRequest } from './nameOnlyMetaDataRequest';
 
 export class CreateWorkflowStepDefinitionRequest {
-    /**
-    * A description of what the step does.
-    */
-    'description': string;
     /**
     * The number of minutes after finishing the previous step that this step should execute by.
     */
@@ -45,19 +42,11 @@ export class CreateWorkflowStepDefinitionRequest {
     * The port that starts this step.
     */
     'triggerPort'?: string;
-    /**
-    * The name of a custom function.
-    */
-    'externalStepName'?: string;
+    'metaData': NameOnlyMetaDataRequest;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
         {
             "name": "delay",
             "baseName": "delay",
@@ -94,9 +83,9 @@ export class CreateWorkflowStepDefinitionRequest {
             "type": "string"
         },
         {
-            "name": "externalStepName",
-            "baseName": "externalStepName",
-            "type": "string"
+            "name": "metaData",
+            "baseName": "metaData",
+            "type": "NameOnlyMetaDataRequest"
         }    ];
 
     static getAttributeTypeMap() {

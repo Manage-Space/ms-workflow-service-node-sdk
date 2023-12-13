@@ -16,12 +16,12 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { BadRequestError400Response } from '../model/badRequestError400Response';
+import { CreateMetaData200Response } from '../model/createMetaData200Response';
 import { CreateMetaDataRequest } from '../model/createMetaDataRequest';
 import { CreateWorkflowDefinition200Response } from '../model/createWorkflowDefinition200Response';
 import { CreateWorkflowDefinitionRequest } from '../model/createWorkflowDefinitionRequest';
 import { ForbiddenError403Response } from '../model/forbiddenError403Response';
 import { GetByWorkflowInstanceId200Response } from '../model/getByWorkflowInstanceId200Response';
-import { GetStepCode200Response } from '../model/getStepCode200Response';
 import { GetStepNames200Response } from '../model/getStepNames200Response';
 import { GetWorkflowInstanceById200Response } from '../model/getWorkflowInstanceById200Response';
 import { GetWorkflowInstances200Response } from '../model/getWorkflowInstances200Response';
@@ -111,7 +111,7 @@ export class DefaultApi {
      * @param orgId The Organization ID
      * @param createMetaDataRequest 
      */
-    public async createMetaData (orgId: string, createMetaDataRequest: CreateMetaDataRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetStepCode200Response;  }> {
+    public async createMetaData (orgId: string, createMetaDataRequest: CreateMetaDataRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateMetaData200Response;  }> {
         const localVarPath = this.basePath + '/workflow/orgs/{orgId}/meta-data'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)));
         let localVarQueryParameters: any = {};
@@ -168,13 +168,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: GetStepCode200Response;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateMetaData200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "GetStepCode200Response");
+                            body = ObjectSerializer.deserialize(body, "CreateMetaData200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -528,7 +528,7 @@ export class DefaultApi {
      * @param definitionId Workflow definition ID
      * @param stepId Workflow step definition ID
      */
-    public async getStepCode (orgId: string, definitionId: string, stepId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetStepCode200Response;  }> {
+    public async getStepCode (orgId: string, definitionId: string, stepId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateMetaData200Response;  }> {
         const localVarPath = this.basePath + '/workflow/orgs/{orgId}/definitions/{definitionId}/steps/{stepId}/code'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)))
             .replace('{' + 'definitionId' + '}', encodeURIComponent(String(definitionId)))
@@ -591,13 +591,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: GetStepCode200Response;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateMetaData200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "GetStepCode200Response");
+                            body = ObjectSerializer.deserialize(body, "CreateMetaData200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

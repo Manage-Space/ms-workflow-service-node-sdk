@@ -12,9 +12,13 @@
 
 import { RequestFile } from './models';
 
-export class CreateMetaDataRequest {
+export class ExcludeCodeMetaData {
     /**
-    * The name of the executable code.
+    * The id of the metaData.
+    */
+    'metaDataId': string;
+    /**
+    * The name of the step the metaData is linked to.
     */
     'name': string;
     /**
@@ -37,6 +41,11 @@ export class CreateMetaDataRequest {
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "metaDataId",
+            "baseName": "metaDataId",
+            "type": "string"
+        },
         {
             "name": "name",
             "baseName": "name",
@@ -64,7 +73,7 @@ export class CreateMetaDataRequest {
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateMetaDataRequest.attributeTypeMap;
+        return ExcludeCodeMetaData.attributeTypeMap;
     }
 }
 

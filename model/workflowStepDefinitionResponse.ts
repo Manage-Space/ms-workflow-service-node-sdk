@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { ExcludeCodeMetaData } from './excludeCodeMetaData';
 
 export class WorkflowStepDefinitionResponse {
     /**
@@ -22,17 +23,9 @@ export class WorkflowStepDefinitionResponse {
     */
     'workflowDefinitionId': string;
     /**
-    * A description of what the step does.
-    */
-    'description': string;
-    /**
     * The number of minutes after finishing the previous step that this step should execute by.
     */
     'delay'?: number;
-    /**
-    * The name of a custom function.
-    */
-    'externalStepName'?: string;
     /**
     * Step position
     */
@@ -57,6 +50,7 @@ export class WorkflowStepDefinitionResponse {
     * The port that starts this step.
     */
     'triggerPort'?: string;
+    'metaData': ExcludeCodeMetaData;
 
     static discriminator: string | undefined = undefined;
 
@@ -72,19 +66,9 @@ export class WorkflowStepDefinitionResponse {
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
             "name": "delay",
             "baseName": "delay",
             "type": "number"
-        },
-        {
-            "name": "externalStepName",
-            "baseName": "externalStepName",
-            "type": "string"
         },
         {
             "name": "stepPosition",
@@ -115,6 +99,11 @@ export class WorkflowStepDefinitionResponse {
             "name": "triggerPort",
             "baseName": "triggerPort",
             "type": "string"
+        },
+        {
+            "name": "metaData",
+            "baseName": "metaData",
+            "type": "ExcludeCodeMetaData"
         }    ];
 
     static getAttributeTypeMap() {

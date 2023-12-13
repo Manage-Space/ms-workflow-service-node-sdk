@@ -6,14 +6,15 @@ git_push.sh
 model/badRequestError400Response.ts
 model/badRequestError400ResponseError.ts
 model/baseError.ts
+model/createMetaData200Response.ts
 model/createMetaDataRequest.ts
 model/createWorkflowDefinition200Response.ts
 model/createWorkflowDefinitionRequest.ts
 model/createWorkflowStepDefinitionRequest.ts
+model/excludeCodeMetaData.ts
 model/forbiddenError403Response.ts
 model/forbiddenError403ResponseError.ts
 model/getByWorkflowInstanceId200Response.ts
-model/getStepCode200Response.ts
 model/getStepNames200Response.ts
 model/getWorkflowInstanceById200Response.ts
 model/getWorkflowInstances200Response.ts
@@ -23,6 +24,7 @@ model/internalServerError500ResponseError.ts
 model/metaDataCodeResponse.ts
 model/metaDataNameResponse.ts
 model/models.ts
+model/nameOnlyMetaDataRequest.ts
 model/unauthorizedError401Response.ts
 model/unauthorizedError401ResponseError.ts
 model/updateStepInstanceRequestDto.ts

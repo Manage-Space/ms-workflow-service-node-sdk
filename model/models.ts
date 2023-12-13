@@ -3,14 +3,15 @@ import localVarRequest from 'request';
 export * from './badRequestError400Response';
 export * from './badRequestError400ResponseError';
 export * from './baseError';
+export * from './createMetaData200Response';
 export * from './createMetaDataRequest';
 export * from './createWorkflowDefinition200Response';
 export * from './createWorkflowDefinitionRequest';
 export * from './createWorkflowStepDefinitionRequest';
+export * from './excludeCodeMetaData';
 export * from './forbiddenError403Response';
 export * from './forbiddenError403ResponseError';
 export * from './getByWorkflowInstanceId200Response';
-export * from './getStepCode200Response';
 export * from './getStepNames200Response';
 export * from './getWorkflowInstanceById200Response';
 export * from './getWorkflowInstances200Response';
@@ -19,6 +20,7 @@ export * from './internalServerError500Response';
 export * from './internalServerError500ResponseError';
 export * from './metaDataCodeResponse';
 export * from './metaDataNameResponse';
+export * from './nameOnlyMetaDataRequest';
 export * from './unauthorizedError401Response';
 export * from './unauthorizedError401ResponseError';
 export * from './updateStepInstanceRequestDto';
@@ -43,14 +45,15 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 import { BadRequestError400Response } from './badRequestError400Response';
 import { BadRequestError400ResponseError } from './badRequestError400ResponseError';
 import { BaseError } from './baseError';
+import { CreateMetaData200Response } from './createMetaData200Response';
 import { CreateMetaDataRequest } from './createMetaDataRequest';
 import { CreateWorkflowDefinition200Response } from './createWorkflowDefinition200Response';
 import { CreateWorkflowDefinitionRequest } from './createWorkflowDefinitionRequest';
 import { CreateWorkflowStepDefinitionRequest } from './createWorkflowStepDefinitionRequest';
+import { ExcludeCodeMetaData } from './excludeCodeMetaData';
 import { ForbiddenError403Response } from './forbiddenError403Response';
 import { ForbiddenError403ResponseError } from './forbiddenError403ResponseError';
 import { GetByWorkflowInstanceId200Response } from './getByWorkflowInstanceId200Response';
-import { GetStepCode200Response } from './getStepCode200Response';
 import { GetStepNames200Response } from './getStepNames200Response';
 import { GetWorkflowInstanceById200Response } from './getWorkflowInstanceById200Response';
 import { GetWorkflowInstances200Response } from './getWorkflowInstances200Response';
@@ -59,6 +62,7 @@ import { InternalServerError500Response } from './internalServerError500Response
 import { InternalServerError500ResponseError } from './internalServerError500ResponseError';
 import { MetaDataCodeResponse } from './metaDataCodeResponse';
 import { MetaDataNameResponse } from './metaDataNameResponse';
+import { NameOnlyMetaDataRequest } from './nameOnlyMetaDataRequest';
 import { UnauthorizedError401Response } from './unauthorizedError401Response';
 import { UnauthorizedError401ResponseError } from './unauthorizedError401ResponseError';
 import { UpdateStepInstanceRequestDto } from './updateStepInstanceRequestDto';
@@ -88,14 +92,15 @@ let typeMap: {[index: string]: any} = {
     "BadRequestError400Response": BadRequestError400Response,
     "BadRequestError400ResponseError": BadRequestError400ResponseError,
     "BaseError": BaseError,
+    "CreateMetaData200Response": CreateMetaData200Response,
     "CreateMetaDataRequest": CreateMetaDataRequest,
     "CreateWorkflowDefinition200Response": CreateWorkflowDefinition200Response,
     "CreateWorkflowDefinitionRequest": CreateWorkflowDefinitionRequest,
     "CreateWorkflowStepDefinitionRequest": CreateWorkflowStepDefinitionRequest,
+    "ExcludeCodeMetaData": ExcludeCodeMetaData,
     "ForbiddenError403Response": ForbiddenError403Response,
     "ForbiddenError403ResponseError": ForbiddenError403ResponseError,
     "GetByWorkflowInstanceId200Response": GetByWorkflowInstanceId200Response,
-    "GetStepCode200Response": GetStepCode200Response,
     "GetStepNames200Response": GetStepNames200Response,
     "GetWorkflowInstanceById200Response": GetWorkflowInstanceById200Response,
     "GetWorkflowInstances200Response": GetWorkflowInstances200Response,
@@ -104,6 +109,7 @@ let typeMap: {[index: string]: any} = {
     "InternalServerError500ResponseError": InternalServerError500ResponseError,
     "MetaDataCodeResponse": MetaDataCodeResponse,
     "MetaDataNameResponse": MetaDataNameResponse,
+    "NameOnlyMetaDataRequest": NameOnlyMetaDataRequest,
     "UnauthorizedError401Response": UnauthorizedError401Response,
     "UnauthorizedError401ResponseError": UnauthorizedError401ResponseError,
     "UpdateStepInstanceRequestDto": UpdateStepInstanceRequestDto,
