@@ -21,6 +21,7 @@ export * from './internalServerError500ResponseError';
 export * from './metaDataCodeResponse';
 export * from './metaDataNameResponse';
 export * from './nameOnlyMetaDataRequest';
+export * from './setStepInstanceExecuteByRequestDto';
 export * from './unauthorizedError401Response';
 export * from './unauthorizedError401ResponseError';
 export * from './updateStepInstanceRequestDto';
@@ -63,6 +64,7 @@ import { InternalServerError500ResponseError } from './internalServerError500Res
 import { MetaDataCodeResponse } from './metaDataCodeResponse';
 import { MetaDataNameResponse } from './metaDataNameResponse';
 import { NameOnlyMetaDataRequest } from './nameOnlyMetaDataRequest';
+import { SetStepInstanceExecuteByRequestDto } from './setStepInstanceExecuteByRequestDto';
 import { UnauthorizedError401Response } from './unauthorizedError401Response';
 import { UnauthorizedError401ResponseError } from './unauthorizedError401ResponseError';
 import { UpdateStepInstanceRequestDto } from './updateStepInstanceRequestDto';
@@ -110,6 +112,7 @@ let typeMap: {[index: string]: any} = {
     "MetaDataCodeResponse": MetaDataCodeResponse,
     "MetaDataNameResponse": MetaDataNameResponse,
     "NameOnlyMetaDataRequest": NameOnlyMetaDataRequest,
+    "SetStepInstanceExecuteByRequestDto": SetStepInstanceExecuteByRequestDto,
     "UnauthorizedError401Response": UnauthorizedError401Response,
     "UnauthorizedError401ResponseError": UnauthorizedError401ResponseError,
     "UpdateStepInstanceRequestDto": UpdateStepInstanceRequestDto,
