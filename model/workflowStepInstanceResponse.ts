@@ -43,14 +43,6 @@ export class WorkflowStepInstanceResponse {
     */
     'ports'?: object;
     /**
-    * The port that starts this step.
-    */
-    'triggerPort'?: string;
-    /**
-    * The number of minutes after finishing the previous step that this step should execute by.
-    */
-    'delay'?: number;
-    /**
     * The time at which this step should begin executing
     */
     'executeBy'?: Date;
@@ -58,14 +50,6 @@ export class WorkflowStepInstanceResponse {
     * Step position
     */
     'stepPosition': number;
-    /**
-    * Previous step position
-    */
-    'previousStep'?: number;
-    /**
-    * Next step position
-    */
-    'nextStep'?: number;
     /**
     * The number of times this step has run.
     */
@@ -115,16 +99,6 @@ export class WorkflowStepInstanceResponse {
             "type": "object"
         },
         {
-            "name": "triggerPort",
-            "baseName": "triggerPort",
-            "type": "string"
-        },
-        {
-            "name": "delay",
-            "baseName": "delay",
-            "type": "number"
-        },
-        {
             "name": "executeBy",
             "baseName": "executeBy",
             "type": "Date"
@@ -132,16 +106,6 @@ export class WorkflowStepInstanceResponse {
         {
             "name": "stepPosition",
             "baseName": "stepPosition",
-            "type": "number"
-        },
-        {
-            "name": "previousStep",
-            "baseName": "previousStep",
-            "type": "number"
-        },
-        {
-            "name": "nextStep",
-            "baseName": "nextStep",
             "type": "number"
         },
         {

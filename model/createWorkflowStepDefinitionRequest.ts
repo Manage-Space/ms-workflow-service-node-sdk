@@ -15,21 +15,9 @@ import { NameOnlyMetaDataRequest } from './nameOnlyMetaDataRequest';
 
 export class CreateWorkflowStepDefinitionRequest {
     /**
-    * The number of minutes after finishing the previous step that this step should execute by.
-    */
-    'delay'?: number;
-    /**
     * Step position
     */
     'stepPosition': number;
-    /**
-    * Step position
-    */
-    'previousStep'?: number;
-    /**
-    * Step position
-    */
-    'nextStep'?: number;
     /**
     * Max run count of a step
     */
@@ -38,33 +26,14 @@ export class CreateWorkflowStepDefinitionRequest {
     * Ports
     */
     'ports'?: object | null;
-    /**
-    * The port that starts this step.
-    */
-    'triggerPort'?: string;
     'metaData': NameOnlyMetaDataRequest;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "delay",
-            "baseName": "delay",
-            "type": "number"
-        },
-        {
             "name": "stepPosition",
             "baseName": "stepPosition",
-            "type": "number"
-        },
-        {
-            "name": "previousStep",
-            "baseName": "previousStep",
-            "type": "number"
-        },
-        {
-            "name": "nextStep",
-            "baseName": "nextStep",
             "type": "number"
         },
         {
@@ -76,11 +45,6 @@ export class CreateWorkflowStepDefinitionRequest {
             "name": "ports",
             "baseName": "ports",
             "type": "object"
-        },
-        {
-            "name": "triggerPort",
-            "baseName": "triggerPort",
-            "type": "string"
         },
         {
             "name": "metaData",

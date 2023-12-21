@@ -23,21 +23,9 @@ export class WorkflowStepDefinitionResponse {
     */
     'workflowDefinitionId': string;
     /**
-    * The number of minutes after finishing the previous step that this step should execute by.
-    */
-    'delay'?: number;
-    /**
     * Step position
     */
     'stepPosition': number;
-    /**
-    * Previous step position
-    */
-    'previousStep'?: number;
-    /**
-    * Next step position
-    */
-    'nextStep'?: number;
     /**
     * The number of times this step can run.
     */
@@ -46,10 +34,6 @@ export class WorkflowStepDefinitionResponse {
     * Ports
     */
     'ports'?: object;
-    /**
-    * The port that starts this step.
-    */
-    'triggerPort'?: string;
     'metaData': ExcludeCodeMetaData;
 
     static discriminator: string | undefined = undefined;
@@ -66,23 +50,8 @@ export class WorkflowStepDefinitionResponse {
             "type": "string"
         },
         {
-            "name": "delay",
-            "baseName": "delay",
-            "type": "number"
-        },
-        {
             "name": "stepPosition",
             "baseName": "stepPosition",
-            "type": "number"
-        },
-        {
-            "name": "previousStep",
-            "baseName": "previousStep",
-            "type": "number"
-        },
-        {
-            "name": "nextStep",
-            "baseName": "nextStep",
             "type": "number"
         },
         {
@@ -94,11 +63,6 @@ export class WorkflowStepDefinitionResponse {
             "name": "ports",
             "baseName": "ports",
             "type": "object"
-        },
-        {
-            "name": "triggerPort",
-            "baseName": "triggerPort",
-            "type": "string"
         },
         {
             "name": "metaData",
