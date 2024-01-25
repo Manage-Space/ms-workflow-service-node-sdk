@@ -53,7 +53,6 @@ export class CreateWorkflowDefinitionRequest {
 
 export namespace CreateWorkflowDefinitionRequest {
     export enum TriggerEventSchemaCodeNameEnum {
-        AuditEntryRequired = <any> 'AuditEntryRequired',
         MoveOutCreated = <any> 'MoveOutCreated',
         ReservationCreated = <any> 'ReservationCreated',
         ReservationUpdated = <any> 'ReservationUpdated',

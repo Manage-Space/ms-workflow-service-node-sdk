@@ -134,7 +134,6 @@ export class WorkflowDefinitionResponse {
 
 export namespace WorkflowDefinitionResponse {
     export enum TriggerEventSchemaCodeNameEnum {
-        AuditEntryRequired = <any> 'AuditEntryRequired',
         MoveOutCreated = <any> 'MoveOutCreated',
         ReservationCreated = <any> 'ReservationCreated',
         ReservationUpdated = <any> 'ReservationUpdated',
