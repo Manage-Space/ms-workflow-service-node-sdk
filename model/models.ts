@@ -9,17 +9,17 @@ export * from './createWorkflowDefinition200Response';
 export * from './createWorkflowDefinitionRequest';
 export * from './createWorkflowStepDefinitionRequest';
 export * from './excludeCodeMetaData';
+export * from './excludeCodeMetaDataResponse';
 export * from './forbiddenError403Response';
 export * from './forbiddenError403ResponseError';
 export * from './getByWorkflowInstanceId200Response';
-export * from './getStepNames200Response';
+export * from './getWithoutCode200Response';
 export * from './getWorkflowInstanceById200Response';
 export * from './getWorkflowInstances200Response';
 export * from './getWorkflowStepDefinitions200Response';
 export * from './internalServerError500Response';
 export * from './internalServerError500ResponseError';
 export * from './metaDataCodeResponse';
-export * from './metaDataNameResponse';
 export * from './nameOnlyMetaDataRequest';
 export * from './setStepInstanceExecuteByRequestDto';
 export * from './unauthorizedError401Response';
@@ -52,17 +52,17 @@ import { CreateWorkflowDefinition200Response } from './createWorkflowDefinition2
 import { CreateWorkflowDefinitionRequest } from './createWorkflowDefinitionRequest';
 import { CreateWorkflowStepDefinitionRequest } from './createWorkflowStepDefinitionRequest';
 import { ExcludeCodeMetaData } from './excludeCodeMetaData';
+import { ExcludeCodeMetaDataResponse } from './excludeCodeMetaDataResponse';
 import { ForbiddenError403Response } from './forbiddenError403Response';
 import { ForbiddenError403ResponseError } from './forbiddenError403ResponseError';
 import { GetByWorkflowInstanceId200Response } from './getByWorkflowInstanceId200Response';
-import { GetStepNames200Response } from './getStepNames200Response';
+import { GetWithoutCode200Response } from './getWithoutCode200Response';
 import { GetWorkflowInstanceById200Response } from './getWorkflowInstanceById200Response';
 import { GetWorkflowInstances200Response } from './getWorkflowInstances200Response';
 import { GetWorkflowStepDefinitions200Response } from './getWorkflowStepDefinitions200Response';
 import { InternalServerError500Response } from './internalServerError500Response';
 import { InternalServerError500ResponseError } from './internalServerError500ResponseError';
 import { MetaDataCodeResponse } from './metaDataCodeResponse';
-import { MetaDataNameResponse } from './metaDataNameResponse';
 import { NameOnlyMetaDataRequest } from './nameOnlyMetaDataRequest';
 import { SetStepInstanceExecuteByRequestDto } from './setStepInstanceExecuteByRequestDto';
 import { UnauthorizedError401Response } from './unauthorizedError401Response';
@@ -100,17 +100,17 @@ let typeMap: {[index: string]: any} = {
     "CreateWorkflowDefinitionRequest": CreateWorkflowDefinitionRequest,
     "CreateWorkflowStepDefinitionRequest": CreateWorkflowStepDefinitionRequest,
     "ExcludeCodeMetaData": ExcludeCodeMetaData,
+    "ExcludeCodeMetaDataResponse": ExcludeCodeMetaDataResponse,
     "ForbiddenError403Response": ForbiddenError403Response,
     "ForbiddenError403ResponseError": ForbiddenError403ResponseError,
     "GetByWorkflowInstanceId200Response": GetByWorkflowInstanceId200Response,
-    "GetStepNames200Response": GetStepNames200Response,
+    "GetWithoutCode200Response": GetWithoutCode200Response,
     "GetWorkflowInstanceById200Response": GetWorkflowInstanceById200Response,
     "GetWorkflowInstances200Response": GetWorkflowInstances200Response,
     "GetWorkflowStepDefinitions200Response": GetWorkflowStepDefinitions200Response,
     "InternalServerError500Response": InternalServerError500Response,
     "InternalServerError500ResponseError": InternalServerError500ResponseError,
     "MetaDataCodeResponse": MetaDataCodeResponse,
-    "MetaDataNameResponse": MetaDataNameResponse,
     "NameOnlyMetaDataRequest": NameOnlyMetaDataRequest,
     "SetStepInstanceExecuteByRequestDto": SetStepInstanceExecuteByRequestDto,
     "UnauthorizedError401Response": UnauthorizedError401Response,

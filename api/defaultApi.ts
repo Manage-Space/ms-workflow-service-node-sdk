@@ -22,7 +22,7 @@ import { CreateWorkflowDefinition200Response } from '../model/createWorkflowDefi
 import { CreateWorkflowDefinitionRequest } from '../model/createWorkflowDefinitionRequest';
 import { ForbiddenError403Response } from '../model/forbiddenError403Response';
 import { GetByWorkflowInstanceId200Response } from '../model/getByWorkflowInstanceId200Response';
-import { GetStepNames200Response } from '../model/getStepNames200Response';
+import { GetWithoutCode200Response } from '../model/getWithoutCode200Response';
 import { GetWorkflowInstanceById200Response } from '../model/getWorkflowInstanceById200Response';
 import { GetWorkflowInstances200Response } from '../model/getWorkflowInstances200Response';
 import { GetWorkflowStepDefinitions200Response } from '../model/getWorkflowStepDefinitions200Response';
@@ -609,11 +609,11 @@ export class DefaultApi {
         });
     }
     /**
-     * Get the meta data step names for all steps in your organization.
-     * @summary Get the meta data step names for all steps in your organization.
+     * Get the meta data for all steps in your organization, excluding code.
+     * @summary Get the meta data for all steps in your organization, excluding code.
      * @param orgId The Organization ID
      */
-    public async getStepNames (orgId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetStepNames200Response;  }> {
+    public async getWithoutCode (orgId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetWithoutCode200Response;  }> {
         const localVarPath = this.basePath + '/workflow/orgs/{orgId}/meta-data'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)));
         let localVarQueryParameters: any = {};
@@ -629,7 +629,7 @@ export class DefaultApi {
 
         // verify required parameter 'orgId' is not null or undefined
         if (orgId === null || orgId === undefined) {
-            throw new Error('Required parameter orgId was null or undefined when calling getStepNames.');
+            throw new Error('Required parameter orgId was null or undefined when calling getWithoutCode.');
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
@@ -664,13 +664,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: GetStepNames200Response;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: GetWithoutCode200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "GetStepNames200Response");
+                            body = ObjectSerializer.deserialize(body, "GetWithoutCode200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
