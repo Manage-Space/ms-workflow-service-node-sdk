@@ -37,6 +37,10 @@ export class ExcludeCodeMetaData {
     * Is the code public or private.
     */
     'isPublic': boolean;
+    /**
+    * The available ports for this step
+    */
+    'ports': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -70,6 +74,11 @@ export class ExcludeCodeMetaData {
             "name": "isPublic",
             "baseName": "isPublic",
             "type": "boolean"
+        },
+        {
+            "name": "ports",
+            "baseName": "ports",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
