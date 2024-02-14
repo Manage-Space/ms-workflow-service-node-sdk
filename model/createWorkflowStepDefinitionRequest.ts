@@ -26,6 +26,9 @@ export class CreateWorkflowStepDefinitionRequest {
     * Ports
     */
     'ports'?: object | null;
+    /**
+    * The name of the step the metaData is linked to.
+    */
     'metaData': NameOnlyMetaDataRequest;
 
     static discriminator: string | undefined = undefined;

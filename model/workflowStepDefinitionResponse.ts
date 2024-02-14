@@ -34,6 +34,9 @@ export class WorkflowStepDefinitionResponse {
     * Ports
     */
     'ports'?: object;
+    /**
+    * The name of the step the metaData is linked to.
+    */
     'metaData': ExcludeCodeMetaData;
 
     static discriminator: string | undefined = undefined;
